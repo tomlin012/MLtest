@@ -1,13 +1,13 @@
 
 from PIL import Image
 from PIL import ImageChops
+import sys
 import numpy as np
 
-print(123)
-im1 = Image.open("P1.png")
+im1 = Image.open(sys.argv[1])
 arr1 = np.array(im1)
 
-im2 = Image.open("P2.png")
+im2 = Image.open(sys.argv[2])
 arr2 = np.array(im2)
 
 length = arr1.shape
@@ -35,7 +35,7 @@ for i in range(length[0]):
 """
 
 ans1 = Image.fromarray(ans.astype('uint8'))
-ans1.save("ans.png")
+ans1.save("ans_two.png")
 
 
 

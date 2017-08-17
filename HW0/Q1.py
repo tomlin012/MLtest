@@ -1,8 +1,8 @@
 # encoding: utf-8
 import numpy as np
-
-A = np.genfromtxt('matrixA.txt',dtype='int')
-B = np.genfromtxt('matrixB.txt',dtype='int')
+import sys
+A = np.genfromtxt(sys.argv[1],dtype='int')
+B = np.genfromtxt(sys.argv[2],dtype='int')
 
 """
 with open('matrixA.txt', encoding = 'UTF-8') as f:
@@ -18,6 +18,6 @@ A = np.array(A)
 
 C = np.dot(A,B)
 
-np.savetxt("ans.txt", C, fmt="%d", delimiter='\n') 
+np.savetxt("ans_one.txt", C, fmt="%d", delimiter='\n') 
 
 
